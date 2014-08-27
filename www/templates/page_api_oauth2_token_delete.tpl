@@ -1,7 +1,8 @@
-{capture assign="page_title"}Revoke access for the {$token.app.app_title} application | Applications | API{/capture}
-{include file="inc_head.txt"}
 
-{include file="inc_api_header.txt" title="Revoke access for this token"}
+{capture assign="page_title"}Revoke access for the {$token.app.app_title} application | Applications | API{/capture}
+{include file="inc_head.tpl"}
+
+{include file="inc_api_header.tpl" title="Revoke access for this token"}
 
 {if $delete_rsp}
 
@@ -31,4 +32,4 @@
 
 {/if}
 
-{include file="inc_foot.txt"}
+{include file="inc_foot.tpl"}

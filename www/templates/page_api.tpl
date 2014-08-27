@@ -1,8 +1,8 @@
 {capture assign="page_title"}API{/capture}
-{include file="inc_head.txt"}
+{include file="inc_head.tpl"}
 
 {capture assign="title"}Application Programming Interface (API){/capture}
-{include file="inc_api_header.txt" title=$title}
+{include file="inc_api_header.tpl" title=$title}
 
 {if "api_documentation"|@features_is_enabled}
 
@@ -52,4 +52,4 @@
 
 {/if}
 
-{include file="inc_foot.txt"}
+{include file="inc_foot.tpl"}

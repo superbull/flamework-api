@@ -1,7 +1,7 @@
 {capture assign="page_title"}How to | OAuth2 | API{/capture}
-{include file="inc_head.txt"}
+{include file="inc_head.tpl"}
 
-{include file="inc_api_header.txt" title="OAuth2 How to"}
+{include file="inc_api_header.tpl" title="OAuth2 How to"}
 
 <div class="api-sect">
 
@@ -152,4 +152,4 @@
 
 </div>
 
-{include file="inc_foot.txt"}
+{include file="inc_foot.tpl"}

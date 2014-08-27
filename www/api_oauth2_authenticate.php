@@ -1,7 +1,7 @@
 <?php
 
 	# sad face...
-	# http://www.rfc-editor.org/rfc/rfc6749.txt
+	# http://www.rfc-editor.org/rfc/rfc6749.tpl
 
 	include("include/init.php");
 
@@ -20,16 +20,16 @@
 	);
 
 	$key_row = api_keys_utils_get_from_url($key_more);
-	$GLOBALS['smarty']->assign_by_ref("key", $key_row);
+	$GLOBALS['smarty']->assignByRef("key", $key_row);
 
 	$crumb_key = 'access_token_register';
 	$GLOBALS['smarty']->assign("crumb_key", $crumb_key);
 
 	$perms_map = api_oauth2_access_tokens_permissions_map();
-	$GLOBALS['smarty']->assign_by_ref("permissions", $perms_map);
+	$GLOBALS['smarty']->assignByRef("permissions", $perms_map);
 
 	$ttl_map = api_oauth2_access_tokens_ttl_map();
-	$GLOBALS['smarty']->assign_by_ref("ttl_map", $ttl_map);
+	$GLOBALS['smarty']->assignByRef("ttl_map", $ttl_map);
 
 	# Handy helper mode to create auth tokens for yourself...
 
@@ -42,7 +42,7 @@
 		}
 
 		if ($token_row = api_oauth2_access_tokens_get_for_user_and_key($GLOBALS['cfg']['user'], $key_row)){
-			$GLOBALS['smarty']->assign_by_ref("token_row", $token_row);
+			$GLOBALS['smarty']->assignByRef("token_row", $token_row);
 			$GLOBALS['smarty']->assign("has_token", 1);
 		}
 
@@ -57,13 +57,13 @@
 
 			else {
 				$rsp = api_oauth2_access_tokens_create($key_row, $GLOBALS['cfg']['user'], $perms, $ttl);
-				$GLOBALS['smarty']->assign_by_ref("token_rsp", $rsp);
+				$GLOBALS['smarty']->assignByRef("token_rsp", $rsp);
 			}
 		}
 
 		else {}
 
-		$GLOBALS['smarty']->display("page_api_oauth2_authenticate_self.txt");
+		$GLOBALS['smarty']->display("page_api_oauth2_authenticate_self.tpl");
 		exit();
 	}
 
@@ -204,7 +204,7 @@
 		$GLOBALS['smarty']->assign("str_perms", $scope);
 	}
 
-	$GLOBALS['smarty']->display("page_api_oauth2_authenticate.txt");
+	$GLOBALS['smarty']->display("page_api_oauth2_authenticate.tpl");
 	exit();
 
 ?>

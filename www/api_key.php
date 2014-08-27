@@ -29,12 +29,12 @@
 		if ($conf){
 
 			$rsp = api_keys_delete($key_row);
-			$GLOBALS['smarty']->assign_by_ref("delete_rsp", $rsp);
+			$GLOBALS['smarty']->assignByRef("delete_rsp", $rsp);
 		}		
 
-		$GLOBALS['smarty']->assign_by_ref("key", $key_row);
+		$GLOBALS['smarty']->assignByRef("key", $key_row);
 
-		$GLOBALS['smarty']->display("page_api_key_delete.txt");
+		$GLOBALS['smarty']->display("page_api_key_delete.tpl");
 		exit();
 	}
 
@@ -101,16 +101,16 @@
 
 	else {}
 
-	$GLOBALS['smarty']->assign_by_ref("key", $key_row);
+	$GLOBALS['smarty']->assignByRef("key", $key_row);
 
 	if ($token_row = api_oauth2_access_tokens_get_for_user_and_key($GLOBALS['cfg']['user'], $key_row)){
-		$GLOBALS['smarty']->assign_by_ref("self_token", $token_row);
+		$GLOBALS['smarty']->assignByRef("self_token", $token_row);
 		$GLOBALS['smarty']->assign("has_self_token", 1);
 	}
 
 	# TO DO: get API keys stats, etc.
 
-	$GLOBALS['smarty']->display("page_api_key.txt");
+	$GLOBALS['smarty']->display("page_api_key.tpl");
 	exit();
 
 ?>

@@ -1,9 +1,9 @@
 {capture assign="page_title"}{$method} | Explorer | API{/capture}
-{include file="inc_head.txt"}
+{include file="inc_head.tpl"}
 
 <div class="container ap-method">
 
-{include file="inc_api_header.txt" title=$method}
+{include file="inc_api_header.tpl" title=$method}
 
 <div style="margin-top:2em;text-align:right;"><a href="{$cfg.abs_root_url}api/methods/{$method|escape}">return to method documentation</a></div>
 
@@ -218,4 +218,4 @@ $(document).ready(function(){
 {/literal}
 </script>
 
-{include file="inc_foot.txt"}
+{include file="inc_foot.tpl"}

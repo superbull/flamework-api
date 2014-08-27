@@ -1,7 +1,7 @@
 {capture assign="page_title"}Authorize your {$key.app_title} API key | API{/capture}
-{include file="inc_head.txt"}
+{include file="inc_head.tpl"}
 
-{include file="inc_api_header.txt" title="Register ... for yourself"}
+{include file="inc_api_header.tpl" title="Register ... for yourself"}
 
 {if $has_token}
 
@@ -107,4 +107,4 @@ Hrmph. There was a problem creating your auth token. The robots know this so far
 
 {/if}
 
-{include file="inc_foot.txt"}
+{include file="inc_foot.tpl"}

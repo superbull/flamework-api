@@ -34,17 +34,17 @@
 	}
 
 	$GLOBALS['smarty']->assign("method", $method);
-	$GLOBALS['smarty']->assign_by_ref("details", $details);
+	$GLOBALS['smarty']->assignByRef("details", $details);
 
 	$logged_out_token = api_oauth2_access_tokens_fetch_api_explorer_token();
-	$GLOBALS['smarty']->assign_by_ref("logged_out_token", $logged_out_token);
+	$GLOBALS['smarty']->assignByRef("logged_out_token", $logged_out_token);
 
 	if ($user = $GLOBALS['cfg']['user']){
 		$read_only_token = api_oauth2_access_tokens_fetch_api_explorer_token($user);
-		$GLOBALS['smarty']->assign_by_ref("read_only_token", $read_only_token);
+		$GLOBALS['smarty']->assignByRef("read_only_token", $read_only_token);
 	}
 
-	$GLOBALS['smarty']->display("page_api_method_explore.txt");
+	$GLOBALS['smarty']->display("page_api_method_explore.tpl");
 	exit();
 
 ?>

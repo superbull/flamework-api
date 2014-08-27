@@ -1,5 +1,5 @@
 {capture assign="page_title"}Authentication tokens | API{/capture}
-{include file="inc_head.txt"}
+{include file="inc_head.tpl"}
 
 {capture assign="token_count"}{$pagination.total_count}{/capture}
 
@@ -9,7 +9,7 @@
 {/if}
 {/capture}
 
-{include file="inc_api_header.txt" title="Your access tokens"}
+{include file="inc_api_header.tpl" title="Your access tokens"}
 
 <div class="api-sect">
 
@@ -38,5 +38,5 @@
 
 </div>
 
-{include file="inc_pagination.txt"}
-{include file="inc_foot.txt"}
+{include file="inc_pagination.tpl"}
+{include file="inc_foot.tpl"}

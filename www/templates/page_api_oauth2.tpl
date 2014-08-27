@@ -1,13 +1,13 @@
 {capture assign="page_title"}OAuth2 | API{/capture}
-{include file="inc_head.txt"}
+{include file="inc_head.tpl"}
 
-{include file="inc_api_header.txt" title="OAuth2"}
+{include file="inc_api_header.tpl" title="OAuth2"}
 
 <div class="api-sect">
 <p>We require <a href="http://tools.ietf.org/html/rfc6749#section-4.2">OAuth (version 2) access tokens</a> to monitor and limit access to the API. OAuth2 access tokens are granted limited, specific permissions that allow applications to act on your behalf. They are:</p>
 </div>
 
-{include file="inc_api_oauth2_permissions_glossary.txt"}
+{include file="inc_api_oauth2_permissions_glossary.tpl"}
 
 {if "api_authenticate_self"|@features_is_enabled}
 
@@ -17,4 +17,4 @@
 
 {/if}
 
-{include file="inc_foot.txt"}
+{include file="inc_foot.tpl"}

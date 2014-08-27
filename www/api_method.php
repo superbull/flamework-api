@@ -36,8 +36,8 @@
 	# TO DO: convert markdown in $details
 
 	$GLOBALS['smarty']->assign("method", $method);
-	$GLOBALS['smarty']->assign_by_ref("details", $details);
+	$GLOBALS['smarty']->assignByRef("details", $details);
 
-	$GLOBALS['smarty']->display("page_api_method.txt");
+	$GLOBALS['smarty']->display("page_api_method.tpl");
 	exit();
 ?>

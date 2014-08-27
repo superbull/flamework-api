@@ -24,12 +24,12 @@
 		$tokens[] = $row;
 	}
 
-	$GLOBALS['smarty']->assign_by_ref("tokens", $tokens);
+	$GLOBALS['smarty']->assignByRef("tokens", $tokens);
 
 	$perms_map = api_oauth2_access_tokens_permissions_map();
-	$GLOBALS['smarty']->assign_by_ref("permissions", $perms_map);
+	$GLOBALS['smarty']->assignByRef("permissions", $perms_map);
 
-	$GLOBALS['smarty']->display("page_api_oauth2_tokens.txt");
+	$GLOBALS['smarty']->display("page_api_oauth2_tokens.tpl");
 	exit();
 
 ?>

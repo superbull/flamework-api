@@ -1,10 +1,10 @@
 {capture assign="page_title"}{$token.app.app_title} | Applications | API{/capture}
-{include file="inc_head.txt"}
+{include file="inc_head.tpl"}
 
 {capture assign="title"}Your auth token for the {$token.app.app_title} application{/capture}
 {capture assign="subtitle"}It was created {$token.created|date_format}{if $token.created != $token.last_modified} / It was last updated {$token.last_modified|date_format}{/if}{/capture}
 
-{include file="inc_api_header.txt" title=$title}
+{include file="inc_api_header.tpl" title=$title}
 
 {if $update_rsp}
 
@@ -106,4 +106,4 @@ OH NO! INVISIBLE ERROR CAT HISSES AT YOU...
 
 </div>
 
-{include file="inc_foot.txt"}
+{include file="inc_foot.tpl"}

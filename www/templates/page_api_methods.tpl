@@ -1,5 +1,5 @@
 {capture assign="page_title}API methods | API{/capture}
-{include file="inc_head.txt"}
+{include file="inc_head.tpl"}
 
 <div class="container">
 
@@ -34,4 +34,4 @@
 <p class="text-center" style="font-style:italic;">There is also a handy <a href="{$cfg.abs_root_url}api/methods/print/">single-page listing of all the API methods</a> that has a friendly CSS3 print stylesheet for making a paper copy of the documentation.</p>
 </div></div>
 
-{include file="inc_foot.txt"}
+{include file="inc_foot.tpl"}

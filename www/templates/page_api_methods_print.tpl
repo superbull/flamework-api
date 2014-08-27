@@ -1,8 +1,8 @@
 {capture assign="page_title}API methods | API{/capture}
-{include file="inc_head.txt"}
+{include file="inc_head.tpl"}
 
 <div class="container api-methods-toc">
-{include file="inc_api_methods_toc.txt" title="API methods"}
+{include file="inc_api_methods_toc.tpl" title="API methods"}
 </div>
 
 <div class="container">
@@ -10,11 +10,11 @@
 
 {foreach from=$method_classes item="class_details" key="class"}
 {foreach from=$class_details.methods item="method"}
-	{include file="inc_api_method.txt" method=$method.name details=$method}
+	{include file="inc_api_method.tpl" method=$method.name details=$method}
 {/foreach}
 {/foreach}
 
 </div>
 </div>
 
-{include file="inc_foot.txt"}
+{include file="inc_foot.tpl"}

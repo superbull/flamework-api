@@ -5,6 +5,6 @@
 
 	features_ensure_enabled("api");
 
-	$GLOBALS['smarty']->display("page_api.txt");
+	$GLOBALS['smarty']->display("page_api.tpl");
 	exit();
 ?>

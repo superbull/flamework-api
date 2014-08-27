@@ -1,7 +1,7 @@
 <?php
 
 	# sad face...
-	# http://www.rfc-editor.org/rfc/rfc6749.txt
+	# http://www.rfc-editor.org/rfc/rfc6749.tpl
 
 	include("include/init.php");
 
@@ -37,7 +37,7 @@
 	);
 
 	$key_row = api_keys_utils_get_from_url($key_more);
-	$GLOBALS['smarty']->assign_by_ref("key", $key_row);
+	$GLOBALS['smarty']->assignByRef("key", $key_row);
 
 	$ok = 1;
 	$error = null;

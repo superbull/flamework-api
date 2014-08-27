@@ -11,7 +11,7 @@
 	# using the API. (20121026/straup)
 
  	# sad face...
-	# http://www.rfc-editor.org/rfc/rfc6749.txt
+	# http://www.rfc-editor.org/rfc/rfc6749.tpl
 
 	include("include/init.php");
 
@@ -28,10 +28,10 @@
 	$GLOBALS['smarty']->assign("crumb_key", $crumb_key);
 
 	$perms_map = api_oauth2_access_tokens_permissions_map();
-	$GLOBALS['smarty']->assign_by_ref("permissions", $perms_map);
+	$GLOBALS['smarty']->assignByRef("permissions", $perms_map);
 
 	$ttl_map = api_oauth2_access_tokens_ttl_map();
-	$GLOBALS['smarty']->assign_by_ref("ttl_map", $ttl_map);
+	$GLOBALS['smarty']->assignByRef("ttl_map", $ttl_map);
 
 	$step = 1;
 
@@ -90,14 +90,14 @@
 
 			$GLOBALS['smarty']->assign("try_update", 1);
 			$GLOBALS['smarty']->assign("update_ok", $ok);
-			$GLOBALS['smarty']->assign_by_ref("api_key", $key);
-			$GLOBALS['smarty']->assign_by_ref("token", $token);
+			$GLOBALS['smarty']->assignByRef("api_key", $key);
+			$GLOBALS['smarty']->assignByRef("token", $token);
 		}
 	}
 
 	$GLOBALS['smarty']->assign("step", $step);
 
-	$GLOBALS['smarty']->display("page_api_oauth2_authenticate_like_magic.txt");
+	$GLOBALS['smarty']->display("page_api_oauth2_authenticate_like_magic.tpl");
 	exit();
 
 ?>

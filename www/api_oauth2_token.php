@@ -51,12 +51,12 @@
 
 		if ($conf){
 			$rsp = api_oauth2_access_tokens_delete($token_row);
-			$GLOBALS['smarty']->assign_by_ref("delete_rsp", $rsp);
+			$GLOBALS['smarty']->assignByRef("delete_rsp", $rsp);
 		}		
 
-		$GLOBALS['smarty']->assign_by_ref("token", $token_row);
+		$GLOBALS['smarty']->assignByRef("token", $token_row);
 
-		$GLOBALS['smarty']->display("page_api_oauth2_token_delete.txt");
+		$GLOBALS['smarty']->display("page_api_oauth2_token_delete.tpl");
 		exit();
 	}
 
@@ -85,7 +85,7 @@
 			}
 
 			$update_rsp = api_oauth2_access_tokens_update($token_row, $update);
-			$GLOBALS['smarty']->assign_by_ref("update_rsp", $update_rsp);
+			$GLOBALS['smarty']->assignByRef("update_rsp", $update_rsp);
 
 			if ($update_rsp['ok']){
 				$token_row = $update_rsp['token'];
@@ -95,14 +95,14 @@
 
 	else {}
 
-	$GLOBALS['smarty']->assign_by_ref("token", $token_row);
+	$GLOBALS['smarty']->assignByRef("token", $token_row);
 
 	$perms_map = api_oauth2_access_tokens_permissions_map();
-	$GLOBALS['smarty']->assign_by_ref("permissions", $perms_map);
+	$GLOBALS['smarty']->assignByRef("permissions", $perms_map);
 
 	$ttl_map = api_oauth2_access_tokens_ttl_map();
-	$GLOBALS['smarty']->assign_by_ref("ttl_map", $ttl_map);
+	$GLOBALS['smarty']->assignByRef("ttl_map", $ttl_map);
 
-	$GLOBALS['smarty']->display("page_api_oauth2_token.txt");
+	$GLOBALS['smarty']->display("page_api_oauth2_token.tpl");
 	exit();
 ?>

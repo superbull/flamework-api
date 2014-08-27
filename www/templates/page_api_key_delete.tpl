@@ -1,7 +1,7 @@
 {capture assign="page_title"}{$key.app_title} | {$key.api_key} | API{/capture}
-{include file="inc_head.txt"}
+{include file="inc_head.tpl"}
 
-{include file="inc_api_header.txt" title=$key.app_title}
+{include file="inc_api_header.tpl" title=$key.app_title}
 
 {if $delete_rsp}
 
@@ -39,4 +39,4 @@
 
 {/if}
 
-{include file="inc_foot.txt"}
+{include file="inc_foot.tpl"}

@@ -1,7 +1,7 @@
 {capture assign="page_title"}Create a new API key | API{/capture}
-{include file="inc_head.txt"}
+{include file="inc_head.tpl"}
 
-{include file="inc_api_header.txt" title="Create a new API key"}
+{include file="inc_api_header.tpl" title="Create a new API key"}
 
 {if $error}
 <p class="error">{$error|escape}</p>
@@ -30,7 +30,7 @@
        <tr><td>Name</td><td>{$title|escape}</td></tr>
        <tr><td>Description</td><td>{$description|escape}</td></tr>
        <tr><td>Callback URL</td><td>{if $callback}{$callback|escape}{else}&#8212;{/if}</td></tr>
-       <tr class="api-admin"><td>Terms of Service</td><td><div class="api-tos">{include file="inc_api_tos.txt"}</td></tr>
+       <tr class="api-admin"><td>Terms of Service</td><td><div class="api-tos">{include file="inc_api_tos.tpl"}</td></tr>
        <tr class="api-admin"><td>&nbsp;</td><td><input type="checkbox" name="confirm" /> <label for="confirm">I agree!</label></td></tr>
        <tr class="api-admin"><td>&nbsp;</td><td><input type="submit" value="MAKE IT SO (PLEASE)" /></td></tr>
 </table>
@@ -72,4 +72,4 @@
 
 {/if}
 
-{include file="inc_foot.txt"}
+{include file="inc_foot.tpl"}

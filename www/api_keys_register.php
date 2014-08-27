@@ -63,7 +63,7 @@
 			$step = 3;
 
 			$rsp = api_keys_create($GLOBALS['cfg']['user']['id'], $title, $description, $callback);
-			$GLOBALS['smarty']->assign_by_ref("key_rsp", $rsp);
+			$GLOBALS['smarty']->assignByRef("key_rsp", $rsp);
 
 			if ($rsp['ok']){
 				$url = "{$GLOBALS['cfg']['abs_root_url']}api/keys/{$rsp['key']['api_key']}/?success=1";
@@ -76,7 +76,7 @@
 
 	$GLOBALS['smarty']->assign("step", $step);
 
-	$GLOBALS['smarty']->display("page_api_keys_register.txt");
+	$GLOBALS['smarty']->display("page_api_keys_register.tpl");
 	exit();
 
 ?>

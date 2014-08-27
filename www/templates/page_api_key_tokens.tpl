@@ -1,5 +1,5 @@
 {capture assign="page_title"}Authed users | {$key.app_title} | {$key.api_key} | API{/capture}
-{include file="inc_head.txt"}
+{include file="inc_head.tpl"}
 
 {capture assign="token_count"}{$pagination.total_count}{/capture}
 
@@ -9,7 +9,7 @@
 {/if}
 {/capture}
 
-{include file="inc_api_header.txt" title="Authenticated users"}
+{include file="inc_api_header.tpl" title="Authenticated users"}
 
 <div class="api-sect">
 <h2>Authenticated users</h2>
@@ -42,8 +42,8 @@
 
 {/if}
 
-{include file="inc_pagination.txt"}
+{include file="inc_pagination.tpl"}
 
 </div>
 
-{include file="inc_foot.txt"}
+{include file="inc_foot.tpl"}

@@ -1,5 +1,5 @@
 {capture assign="page_title"}Your API keys | API{/capture}
-{include file="inc_head.txt"}
+{include file="inc_head.tpl"}
 
 {capture assign="key_count"}{$pagination.total_count}{/capture}
 
@@ -11,7 +11,7 @@
 {/if}
 {/capture}
 
-{include file="inc_api_header.txt" title="Your API keys"}
+{include file="inc_api_header.tpl" title="Your API keys"}
 
 <div class="api-sect">
 
@@ -30,5 +30,5 @@
 
 </div>
 
-{include file="inc_pagination.txt"}
-{include file="inc_foot.txt"}
+{include file="inc_pagination.tpl"}
+{include file="inc_foot.tpl"}

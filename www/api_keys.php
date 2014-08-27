@@ -16,9 +16,9 @@
 	$rsp = api_keys_for_user($GLOBALS['cfg']['user'], $more);
 	$keys = $rsp['rows'];
 
-	$GLOBALS['smarty']->assign_by_ref("keys", $keys);
+	$GLOBALS['smarty']->assignByRef("keys", $keys);
 
-	$GLOBALS['smarty']->display("page_api_keys.txt");
+	$GLOBALS['smarty']->display("page_api_keys.tpl");
 	exit();
 
 ?>

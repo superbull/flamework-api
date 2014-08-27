@@ -42,13 +42,13 @@
 		sort($method_classes[$class_name]['methods']);
 	}
 
-	$GLOBALS['smarty']->assign_by_ref("method_classes", $method_classes);
+	$GLOBALS['smarty']->assignByRef("method_classes", $method_classes);
 
 	if (get_isset("print")){
-		$GLOBALS['smarty']->display("page_api_methods_print.txt");
+		$GLOBALS['smarty']->display("page_api_methods_print.tpl");
 		exit();
 	}
 
-	$GLOBALS['smarty']->display("page_api_methods.txt");
+	$GLOBALS['smarty']->display("page_api_methods.tpl");
 	exit();
 ?>

@@ -91,7 +91,7 @@
 
 	# Table of contents
 
-	$GLOBALS['smarty']->assign_by_ref("methods", $methods);
+	$GLOBALS['smarty']->assignByRef("methods", $methods);
 	fwrite($fh, $GLOBALS['smarty']->fetch("inc_api_methods_toc.txt"));
 
 	# The actual API methods
@@ -104,8 +104,8 @@
 			$details['example_response'] = $rsp['example'];
 		}
 
-		$GLOBALS['smarty']->assign_by_ref("method", $method_name);
-		$GLOBALS['smarty']->assign_by_ref("details", $method_details);
+		$GLOBALS['smarty']->assignByRef("method", $method_name);
+		$GLOBALS['smarty']->assignByRef("details", $method_details);
 
 		fwrite($fh, $GLOBALS['smarty']->fetch("inc_api_method.txt"));
 	}
